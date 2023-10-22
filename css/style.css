@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+body{
+  background-color: burlywood;
+}
+.container {
+  width: 98%;
+  position: relative;
+  align-items: center;
+  margin: 30px 10px;
+}
+.head {
+  width: 100%;
+  height: 100px;
+  margin: 30px 0;
+  padding: 20px;
+}
+.head h1 {
+  text-align: center;
+  color: #4f4a45;
+  font-size: 3rem;
+}
+.main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+.main .menubox {
+  width: 30%;
+  height: 250px;
+  background-color: #f6f1ee;
+  color: #4f4a45;
+  border: solid 1px #000;
+  padding: 60px 20px;
+  margin: 10px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.main #box1 {
+  position: relative;
+  float: left;
+}
+.main #box2 {
+  position: relative;
+  float: left;
+}
+.main #box3 {
+  position: relative;
+  float: left;
+}
+.menubox .title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35%;
+  height: 45px;
+  background-color: #ed7d31;
+  color: #f6f1ee;
+  border: solid 1px #000;
+  border-top: 0;
+  border-right: 0;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.menubox p {
+  font-size: 18px;
+  text-align: justify;
+}
+.menubox #para-2 {
+  display: none;
+}
+
+/* ====================  Media Queries for different screen sizes  =================== */
+
+/*    -------FOR Tablet------- ( screen size greater than 767 less than 992 */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  body .main {
+    display: block;
+    width: 100%;
+    height: 120vh;
+  }
+  .head h1 {
+    font-size: 2.67rem;
+  }
+  #box1, #box2 {
+    position: absolute;
+    top: 0;
+    width: 47.3%;
+  }
+  .main #box3 {
+    display: block;
+    width: 98%;
+    /*float: none;
+    clear: both;
+    position: absolute;
+    bottom: 30px; */
+  }
+  #box3 .title {
+    width: 17.25%;
+    font-size: 20px;
+  }
+  #box1, #box2, #box3 #para-2 {
+    display: block;
+  }
+}
+
+/*    -------FOR MOBILE------- ( screen size than 768 */
+
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
+    position: relative;
+    align-items: center;
+    margin: 20px auto;
+  }
+  .head h1 {
+    font-size: 2.27rem;
+  }
+  body .main {
+    display: block;
+    width: 100%;
+    /* height: 175vh; */
+  }
+  #box1, #box2, #box3 {
+    position: absolute;
+    top: 10px;
+    display: block;
+    float: none;
+    clear: both;
+    width: 97%;
+    /* position: absolute;
+    bottom: 30px; */
+  }
+  .menubox p {
+    font-size: 1rem;
+  }
+}
